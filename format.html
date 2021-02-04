@@ -1,0 +1,40 @@
+<!DOCTYPE hmtl>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <label>name</label><input type="text" id="myname"onkeyup=""/>
+        <p id="ans"></p>
+        <script>
+            
+            var firstname=document.getElementById("myname");
+            firstname.addEventListener("keyup", myFunction);
+            function myFunction(event)
+        {   
+                var number=event.currentTarget.value;
+                var res=number%2;
+                var answer=document.getElementById("ans");
+                if(isNaN(res)){
+                    document.getElementById("ans").innerHTML="not num";
+                }
+                else if(res){
+                    document.getElementById("ans").innerHTML="odd num";
+                }else{
+                    document.getElementById("ans").innerHTML="even num";
+                }
+                
+               
+                
+               
+                
+              console.log(event.currentTarget.value);
+
+
+                
+            }
+
+        </script>
+        
+    </body>
+</html>
